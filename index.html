@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#D6EBF2" />
+
+	<!-- TODO: Add OG tags -->
+	<!-- Reference: https://gethead.info/ -->
+	
+	<!-- TODO: Create Favicon -->
+
+	<title>Ajit Panigrahi | @AjitZero</title>
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+	<!-- Custom CSS -->
+	<link href="style.css" rel="stylesheet">
+
+	<!-- Additional Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display|Roboto" rel="stylesheet">
+
+</head>
+
+<body>
+	<div id="wrapper" class="container-fluid">
+		<!-- Intro section -->
+		<div id="Intro">
+			<h1>Hi, I'm Ajit</h1>
+			<h3>I'm a CS undergrad &amp; I ❤️ all things tech!</h3>
+			<p class="lead">As a programming enthusiast, I have open-source projects on GitHub, contributions in GitHub Hacktoberfest '18 and a competitive coding profile on HackerRank. I'm dedicating my time to online courses in Data Science at Udacity & edX while managing web development projects in multiple college societies.</p>
+			<p>I recently started writing articles related to design thinking for web designing and startup ideation on Medium and got published on "Noteworthy", a publication with 16.8K followers and 18K+ daily reads.</p>
+			<p><strong>Find me online!</strong></p>
+			<a href="https://linkedin.com/in/AjitZero/" target="_blank">LinkedIn</a> · <a href="https://github.com/AjitZero" target="_blank">GitHub</a> · <a href="https://twitter.com/AjitZero" target="_blank">Twitter</a> · <a href="https://medium.com/@AjitZero" target="_blank">Medium</a> · <a href="https://stackoverflow.com/users/8080186/ajitzero" target="_blank">StackOverflow</a> · <a href="https://hackerrank.com/AjitZero" target="_blank">HackerRank</a>
+		</div>
+	</div>
+		
+	<!-- Bootstrap core JavaScript ================================================== -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script>
+		$(function () {
+			var navbar = $(".navbar")
+			var topMenu = $("#PrimaryMenu"),
+			topMenuHeight = topMenu.outerHeight() + 15,
+			menuItems = topMenu.find("li a"),
+			scrollItems = menuItems.map(function () {
+				var item = $($(this).attr("href"));
+				if (item.length) {
+					return item;
+				}
+			});
+
+			$(window).on("scroll", function () {
+				// resize logo on scroll >= 100
+				if ($(this).scrollTop() >= 50) {
+					navbar.css({
+						'margin-top': '0'
+					});
+				} else {
+					navbar.css({
+						'margin-top': '-500px'
+					});
+				}
+
+				// update `.active` for current menu area
+				var fromTop = $(this).scrollTop() + topMenuHeight;
+				var cur = scrollItems.map(function () {
+					if ($(this).offset().top < fromTop) {
+						return this;
+					}
+				});
+				cur = cur[cur.length - 1];
+				var id = cur && cur.length ? cur[0].id : "";
+				menuItems
+				.parent().removeClass("active")
+				.end().filter("[href='#" + id + "']")
+				.parent().addClass("active");
+			});
+
+			// Close navbar on click
+			$('.nav-link').on('click', function () {
+				$('.navbar-collapse').collapse('hide');
+			});
+		});
+	</script>
+</body>
+</html>

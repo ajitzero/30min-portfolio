@@ -1,0 +1,97 @@
+.navbar {
+  background: #d6ebf2;
+  margin-top: -500px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+.navbar .navbar-brand {
+  color: #394244;
+  padding: 10px;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+.navbar .navbar-toggler {
+  border: none;
+  outline: none;
+}
+.navbar .navbar-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.navbar .nav-item {
+  border-radius: 5rem;
+  border: 1px solid #D6EBF2;
+}
+.navbar .nav-item:hover {
+  border: 1px solid #9CCFE0;
+}
+.navbar .navbar-nav .nav-link, .navbar .nav-item.active .nav-link, .navbar .nav-item:hover .nav-link {
+  padding: 1rem 1.5rem;
+  color: #394244;
+}
+.navbar .active {
+  background: #9CCFE0;
+  border-radius: 5rem;
+  border: 1px solid #9CCFE0;
+  color: #394244;
+}
+
+html, body, #wrapper {
+  background: repeating-linear-gradient(to right, #F5FAFB, #F5FAFB 10px, #D6EBF2 10px, #D6EBF2 20px);
+  border: none;
+  box-sizing: border-box;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  width: 100%;
+  transition: all 0.3 ease-in-out;
+}
+
+body {
+  overflow-y: auto;
+}
+
+::selection {
+  background: #D6EBF2;
+}
+
+::-moz-selection {
+  background: #D6EBF2;
+}
+
+a, a:link, a:hover, a:focus {
+  outline: none;
+  transition: all 0.3 ease-in-out;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Playfair Display", serif;
+}
+
+#Intro {
+  background: #F5FAFB;
+  width: 90%;
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 4px 50px 0 rgba(57, 66, 68, 0.3);
+  max-width: 660px;
+}
+@media (max-width: 767px) {
+  #Intro {
+    padding: 2rem 1.5rem;
+    margin: 10% 5%;
+  }
+}
+@media (min-width: 768px) {
+  #Intro {
+    position: absolute;
+    padding: 2rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

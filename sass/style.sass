@@ -1,0 +1,49 @@
+@import "base"
+@import "navbar"
+
+html, body, #wrapper
+	// background: #FFF
+	background: repeating-linear-gradient( to right, $off-light, $off-light 10px, $primary-color 10px, $primary-color 20px )
+	border: none
+	box-sizing: border-box
+	font-family: $sans-serif
+	height: 100%
+	margin: 0
+	outline: none
+	padding: 0
+	width: 100%
+	transition: all 0.3 ease-in-out
+
+body
+	overflow-y: auto
+
+::selection
+	background: $primary-color
+
+::-moz-selection
+	background: $primary-color
+
+a, a:link, a:hover, a:focus
+	outline: none
+	transition: all 0.3 ease-in-out
+
+h1, h2, h3, h4, h5, h6
+	font-family: $serif
+
+#Intro
+	background: $off-light
+	width: 90%
+	box-sizing: border-box
+	border-radius: 4px
+	box-shadow: 0 4px 50px 0 rgba($off-dark, .3)
+	max-width: 660px
+	@media( #{$bp-sm})
+		padding: 2rem 1.5rem
+		margin: 10% 5%
+	@media( #{$bp-md})
+		position: absolute
+		padding: 2rem
+		top: 50%
+		left: 50%
+		transform: translate(-50%, -50%)
+		
